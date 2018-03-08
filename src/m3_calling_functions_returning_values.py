@@ -80,12 +80,12 @@ def run_test_sum_of_digits():
 
     expected = 13
     answer = sum_of_digits(562)
-    print('Test 3 expected', expected)
+    print('Test 2 expected', expected)
     print('       actual:  ', answer)
 
     expected = 19
     answer = sum_of_digits(667)
-    print('Test 4 expected', expected)
+    print('Test 2 expected', expected)
     print('       actual:  ', answer)
 
 def sum_of_digits(number):
@@ -151,7 +151,17 @@ def run_test_digits_in_cube():
 
     expected = 9
     answer = digits_in_cube(6)
-    print('Test 5 expected', expected)
+    print('Test 3 expected', expected)
+    print('       actual:  ', answer)
+
+    expected = 10
+    answer = digits_in_cube(7)
+    print('Test 3 expected', expected)
+    print('       actual:  ', answer)
+
+    expected = 8
+    answer = digits_in_cube(8)
+    print('Test 3 expected', expected)
     print('       actual:  ', answer)
 
 
@@ -198,6 +208,20 @@ def run_test_digits_in_power():
     print('Test 6 expected', expected)
     print('       actual:  ', answer)
 
+    expected = 46
+    n = 13
+    k = 9
+    answer = digits_in_power(n, k)
+    print('Test 6 expected', expected)
+    print('       actual:  ', answer)
+
+    expected = 54
+    n = 27
+    k = 8
+    answer = digits_in_power(n, k)
+    print('Test 6 expected', expected)
+    print('       actual:  ', answer)
+
 
 def digits_in_power(n, k):
     """
@@ -237,6 +261,18 @@ def run_test_fancy_sums_of_digits():
 
     expected = 76738
     n = 11
+    answer = fancy_sums_of_digits(n)
+    print('Test 7 expected', expected)
+    print('       actual:  ', answer)
+
+    expected = 76866
+    n = 12
+    answer = fancy_sums_of_digits(n)
+    print('Test 7 expected', expected)
+    print('       actual:  ', answer)
+
+    expected = 61069
+    n = 13
     answer = fancy_sums_of_digits(n)
     print('Test 7 expected', expected)
     print('       actual:  ', answer)
