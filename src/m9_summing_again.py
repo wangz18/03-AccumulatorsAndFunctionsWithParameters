@@ -4,8 +4,8 @@ in its simplest classic forms:
    SUMMING:       total = total + number
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Zhiyu Wang.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -17,7 +17,7 @@ def main():
 def run_test_sum_powers():
     """ Tests the   sum_powers   function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this function.
+    # DONE: 2. Implement this function.
     #   It TESTS the  sum_powers  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -28,6 +28,26 @@ def run_test_sum_powers():
     print('--------------------------------------------------')
     print('Testing the   sum_powers   function:')
     print('--------------------------------------------------')
+    expected = 5
+    n = 2
+    p = 2
+    answer = sum_powers(n, p)
+    print('Test 1 expected', expected)
+    print('       actual:  ', answer)
+
+    expected = 14
+    n = 3
+    p = 2
+    answer = sum_powers(n, p)
+    print('Test 2 expected', expected)
+    print('       actual:  ', answer)
+
+    expected = 650
+    n = 12
+    p = 2
+    answer = sum_powers(n, p)
+    print('Test 3 expected', expected)
+    print('       actual:  ', answer)
 
 
 def sum_powers(n, p):
@@ -43,18 +63,23 @@ def sum_powers(n, p):
       -- sum_powers(100, 0.1) returns about 144.45655
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     #   No fair running the code of  sum_powers  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
 
+    result = 0
+    for k in range (n+1):
+        result = result+k**p
+    return result
+
 
 def run_test_sum_powers_in_range():
     """ Tests the   sum_powers_in_range   function. """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this function.
+    # DONE: 4. Implement this function.
     #   It TESTS the  sum_powers_in_range  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -65,7 +90,29 @@ def run_test_sum_powers_in_range():
     print('--------------------------------------------------')
     print('Testing the   sum_powers_in_range   function:')
     print('--------------------------------------------------')
+    expected = 2274
+    m = 2
+    n = 6
+    p = 4
+    answer = sum_powers_in_range(m, n, p)
+    print('Test 1 expected', expected)
+    print('       actual:  ', answer)
 
+    expected = 142.384776
+    m = 3
+    n = 100
+    p = 0.1
+    answer = sum_powers_in_range(m, n, p)
+    print('Test 2 expected', expected)
+    print('       actual:  ', answer)
+
+    expected = 13
+    m = 2
+    n = 3
+    p = 2
+    answer = sum_powers_in_range(m, n, p)
+    print('Test 3 expected', expected)
+    print('       actual:  ', answer)
 
 def sum_powers_in_range(m, n, p):
     """
@@ -80,14 +127,17 @@ def sum_powers_in_range(m, n, p):
       -- sum_powers_in_range(3, 100, 0.1) returns about 142.384776
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     #   No fair running the code of  sum_powers_in_range  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
 
-
+    result = 0
+    for k in range(n-m+1):
+        result = result + (m+k)**p
+    return result
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
